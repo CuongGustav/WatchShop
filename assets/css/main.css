@@ -14,13 +14,16 @@ html{
    --widthbrowse: 1200px;
 }
 
+
 /*header*/
 header{
+    position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     right: 0;
     background: linear-gradient(90deg, #ede728d6 0%, #f3f9a7 100%);
     padding: 20px 0 10px 0;
+    z-index: 10;
 }
 header .header-content{
     display: flex;
@@ -28,7 +31,10 @@ header .header-content{
     align-items: center;
     font-size: 40px;
 }
-.header-content {
+.breadcrumb,
+.header-content,
+.productList,
+.paginationPage {
     max-width: 90%;
     width: 1200px;
     margin: auto
@@ -53,6 +59,18 @@ header .header-content{
     height: 30px;
     border-radius: 50%;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* breadcrumb */
+.breadcrumb{
+    margin-top: 70px;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.breadcrumb:hover{
+    color: #ff652f;
 }
 
 /*Slider*/
@@ -112,3 +130,96 @@ header .header-content{
 }
 
 
+/*ProductList*/
+.productList{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+.productList .item {
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.productList .item:hover {
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 2px 10px rgba(0,0,0, 0.5);
+}
+.productList .item .image img{
+    width: 90%;
+    max-height: 255.05px;
+}
+.productList .item .name{
+    margin-top: 10px;
+}
+.productList .item .name a{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.3;
+    text-decoration: none;
+    color: #000;
+    display: -webkit-box;        
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;            
+    text-overflow: ellipsis;   
+    white-space: normal;
+    padding: 0 20px;
+}
+.productList .item .name a:hover{
+    color:#ff652f;
+    -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.2); /* Độ dày và màu viền của chữ */
+}
+.productList .item .price{
+    font-size: 20px;
+    font-weight: 500;
+    padding: 30px 0px 20px;
+}
+.productList .item .addToBag{
+    font-size: 20px;
+    font-weight: 600;
+    background-color: rgb(236, 245, 66);
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.productList .item .addToBag:hover {
+    background-color: #ff652f;
+}
+
+
+/* paginationPage */
+.paginationPage{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.paginationPage button {
+    padding: 8px;
+    font-size: 20px;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.paginationPage button:hover { 
+    background-color: rgb(236, 245, 66);
+    cursor: pointer;
+}
+.paginationPage .pageNumbers {
+    display: flex;
+    gap: 10px;
+}
+.paginationPage .pageNumbers button.active {
+    background-color: #ff652f;
+}
