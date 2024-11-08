@@ -87,11 +87,52 @@
         </div>
 
         <!-- Contact Us -->
-        <div class="contactUs" style="height: 400px;"></div>
+        <div class="contactUsContainer">
+            <div class="contactUs">
+                <div class="info">
+                    <div class="infoAddress">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h3>Addess</h3>
+                        <p>K58/10 Ngô Sỹ Liên</p>
+                        <p>Liên chiểu, Đà Nẵng</p>
+                    </div>
+                    <div class="infoPhone">
+                        <i class="fa-solid fa-phone"></i>
+                        <h3>Phone</h3>
+                        <p>+84 36 479 8502</p>
+                        <p>+84 35 820 1766</p>
+                    </div>
+                    <div class="infoEmail">
+                        <i class="fa-regular fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>cuongqb137@gmail.comn</p>
+                        <p>cuonggustav@gmail.com</p>
+                    </div>
+                </div>
+                <div class="sendMessage">
+                    <div class="content">
+                        <h2>Send Us Your Message</h2>
+                        <p>We're here to help you. Let's talk about your products and needs.</p>
+                    </div>
+                    <div class="input">
+                        <input type="text" class="yourName" placeholder="Enter your name">
+                        <input type="text" class="yourEmail" placeholder="Enter your email">
+                        <p class="error-message" style="color: red; display: none;">Please enter a valid Gmail address (e.g.@gmail.com)</p>
+                        <textarea name="" id="" class="messageInput" placeholder="Enter your message..."></textarea>
+                    </div>
+                    <div class="button">
+                        <button class="sendEmail" type="submit" onclick="sendEmail()">Send Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         
     </div>
 </body>
 <!-- Swiper JS-->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- Email JS-->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+
 <script src="./js/main.js"></script>
 </html>

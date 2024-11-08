@@ -12,6 +12,7 @@ html{
 :root {
    --max-width-90: 90%;
    --widthbrowse: 1200px;
+   --height-ContactUs: 500px;
 }
 
 
@@ -34,7 +35,8 @@ header .header-content{
 .breadcrumb,
 .header-content,
 .productList,
-.paginationPage {
+.paginationPage,
+.contactUs {
     max-width: 90%;
     width: 1200px;
     margin: auto
@@ -202,7 +204,7 @@ header .header-content{
     gap: 20px;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin: 20px auto;
 }
 .paginationPage button {
     padding: 8px;
@@ -221,5 +223,143 @@ header .header-content{
     gap: 10px;
 }
 .paginationPage .pageNumbers button.active {
+    background-color: #ff652f;
+}
+
+
+/*Contact Us*/
+.contactUsContainer{
+    background: linear-gradient(90deg, #ede728d6 0%, #f3f9a7 100%);
+    height: calc( var(--height-ContactUs) + 160px);
+    display: flex;
+    margin-top: 40px;
+}
+.contactUs{
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    height: var(--height-ContactUs);
+    background-color: #fff;
+    border-radius: 16px;
+    display: flex;
+}
+.contactUs .info {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    position: relative;
+}
+.contactUs .info::before {
+    position: absolute;
+    right: 0;
+    top: 20%;
+    content: "";
+    width: 2px;
+    height: 60%;
+    background-color: rgb(236, 245, 66);
+}
+.contactUs .info .infoAddress,
+.contactUs .info .infoPhone,
+.contactUs .info .infoEmail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contactUs .info i{
+    font-size: 32px;
+    font-weight: 600;
+    color:rgb(236, 245, 66);
+    padding-bottom: 8px;
+}
+.contactUs .info h3{
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 8px;
+}
+.contactUs .info p{
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 8px;
+    color: #bbb;
+}
+.contactUs .sendMessage{
+    width: 75%;
+    padding: 40px;
+    left: 0;
+}
+.contactUs .sendMessage .content,
+.contactUs .sendMessage .button{
+   height: 20%;
+}
+.sendMessage .content h2{
+    font-size: 32px;
+    font-weight: 600;
+    color:black;
+    padding-bottom: 16px;
+}
+.sendMessage .content p{
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 8px;
+    color: black;
+    line-height: 1.4rem;
+}
+.contactUs .sendMessage .input{
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.sendMessage .input input{
+    font-size: 14px;
+    padding: 20px;
+    height: 20%;
+    border: none;
+    outline: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+.sendMessage .input textarea{
+    font-size: 14px;
+    padding: 20px;
+    height: 60%;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    outline: none; 
+    resize: vertical; 
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: text;
+}
+.sendMessage .input textarea::-webkit-scrollbar{
+    width: 8px;
+}
+.sendMessage .input textarea::-webkit-scrollbar-thumb {
+    background-color: rgb(236, 245, 66); 
+    border-radius: 10px;
+    cursor: pointer;
+}
+.sendMessage .input textarea::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+.sendMessage .button button{
+    margin-top: 40px;
+    width: 160px;
+    height: 50%;
+    font-size: 24px;
+    font-weight: 500;
+    color:black;
+    background-color: rgba(236, 245, 66, 0.8);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.sendMessage .button button:hover {
     background-color: #ff652f;
 }

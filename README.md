@@ -6,3 +6,4 @@
 4. ConvertData.ipynb is used to convert information from csv to json
 ## Code
 ### [Link add Swiper] https://swiperjs.com/get-started
+### [Link add EmailJS] https://www.emailjs.com/docs/sdk/installation/

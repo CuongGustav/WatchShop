@@ -121,6 +121,49 @@ function prevPage () {
     }
 }
 
+/*check @gmail.com*/
+const checkEmailInContactUs = () => {
+    const emailInput = document.getElementsByClassName('yourEmail')[0];
+    const errorMessage = document.getElementsByClassName('error-message')[0];
+
+    if (!emailInput.value.endsWith('@gmail.com') || emailInput.value.trim() === '') {
+        emailInput.style.borderColor = 'red';
+        errorMessage.style.display = 'block';
+        return false;
+    }
+
+    emailInput.style.borderColor = '';
+    errorMessage.style.display = 'none';
+    return true;
+};
+/*Send Email*/
+emailjs.init("44pUBi_G1PDWcTUaP");
+const sendEmail = () => {
+    if (!checkEmailInContactUs()) {
+        return;
+    } else {
+        let btnSendEmail = document.getElementsByClassName('sendEmail')[0];
+        let parms = {
+            name: document.getElementsByClassName('yourName')[0].value,
+            email: document.getElementsByClassName('yourEmail')[0].value,
+            message: document.getElementsByClassName('messageInput')[0].value
+        }
+        btnSendEmail.textContent = 'Sending ...';
+    
+        const serviceID = 'service_gi1xr4b';
+        const templateID = 'template_14ialso';
+        emailjs.send(serviceID, templateID, parms)
+        .then(() => {
+            btnSendEmail.textContent = 'Send Now';
+        }, (err) => {
+            btnSendEmail.textContent = 'Send Now';
+            alert(JSON.stringify(err));
+        });
+    }
+}
+document.getElementsByClassName('yourEmail')[0].addEventListener('input', checkEmailInContactUs);
+
+
 /* App */
 const initApp = () => {
     fetch('products.json')
