@@ -1,0 +1,130 @@
+[
+    {
+        "id":1,
+        "city": "TP. Hồ Chí Minh",
+        "showroom": [
+            "Quận 1",
+            "Quận 1 – Premium Swiss Watch",
+            "Tân Bình 1",
+            "Tân Bình 2",
+            "Tân Bình 3",
+            "Quận 2",
+            "Quận 7",
+            "Quận 8",
+            "Quận 9",
+            "Thủ Đức",
+            "Quận Bình Tân 1",
+            "Quận Bình Tân 2",
+            "Quận Gò Vấp",
+            "Hóc Môn"
+        ],
+        "address": [
+            "190D Trần Quang Khải, P.Tân Định, Q.1, TP.HCM",
+            "156A Trần Quang Khải, P.Tân Định, Q.1, TP.HCM",
+            "160 Âu Cơ, P.9, Q.Tân Bình, TP.HCM",
+            "199 Âu Cơ, P.5, Q.11, TP.HCM",
+            "46B Phan Huy Ích, Q.Tân Bình, TP. HCM",
+            "160 Nguyễn Thị Định, P.An Phú, Q.2, TP. HCM",
+            "222 Nguyễn Thị Thập, P. Bình Thuận, Q.7, TP.HCM",
+            "81 Dương Bác Trạc, P.1, Q.8, TP.HCM",
+            "79 Lê Văn Việt, P.Hiệp Phú, Q.9, TP.Thủ Đức",
+            "957 Kha Vạn Cân, P.Linh Tây, Q.Thủ Đức, TP.HCM",
+            "560 Tỉnh Lộ 10, P.Bình Trị Đông, Q.Bình Tân, TP.HCM",
+            "676 Lê Trọng Tấn, P.Bình Hưng Hòa, Q.Bình Tân, TP.HCM",
+            "713 Phan Văn Trị, P.7, Q.Gò Vấp, TP.HCM",
+            "92/2 Nguyễn Ảnh Thủ, Trung Chánh, Tân Xuân, Hóc Môn, TP.HCM"
+        ]
+        
+    },
+    {
+        "id":2,
+        "city": "Hà Nội",
+        "showroom" : [
+            "Quận Đống Đa",
+            "Quận Cầu Giấy"
+        ],
+        "address" : [
+            "310 Xã Đàn, Q.Đống Đa, TP.Hà Nội",
+            "227 Cầu Giấy, P.Dịch Vọng, Q.Cầu Giấy, TP.Hà Nội"
+        ]
+
+    },
+    {
+        "id":3,
+        "city": "Hải Phòng",
+        "showroom" : [
+            "Tô Hiệu"
+        ],
+        "address" : [
+            "229 Tô Hiệu, P.Trại Cau, Q.Lê Chân, TP.Hải Phòng"
+        ]
+    },
+    {
+        "id":4,
+        "city": "Biên Hoà - Bình Dương",
+        "showroom": [
+            "Đồng Khởi",
+            " 30 Tháng 4",
+            "Thủ Dầu Một",
+            "Thuận An",
+            "Lái Thiêu"
+        ],
+        "address": [
+            "64 Đồng Khởi, P.Tân Hiệp, TP.Biên Hoà, Đồng Nai",
+            "239 Đường 30 Tháng 4, P.Trung Dũng, TP.Biên Hòa, Đồng Nai",
+            "538 Cách Mạng Tháng Tám, P.Phú Cường, TP.Thủ Dầu Một, Bình Dương",
+            "143/5 Đường 22/12, P.An Phú, Thuận An, Bình Dương",
+            "38 Cách Mạng Tháng 8, Thuận An, Lái Thiêu, Bình Dương"
+        ]
+    },
+    {
+        "id":5,
+        "city": "Đà Nẵng",
+        "showroom": [
+            "Hải Châu"
+        ],
+        "address": [
+            "157 Nguyễn Du, P.Thạch Thang, Q.Hải Châu, TP.Đà Nẵng"
+        ]
+    },
+    {
+        "id":6,
+        "city": "Vũng Tàu",
+        "showroom": [
+            "Trương Công Định"
+        ],
+        "address": [
+            "515 Trương Công Định, P.8, TP.Vũng Tàu"
+        ]
+    }, 
+    {
+        "id":7,
+        "city": "Cần Thơ",
+        "showroom": [
+            "Ninh Kiều"
+        ],
+        "address": [
+            "85B Lý Tự Trọng, P.An Phú, Q.Ninh Kiều, TP.Cần Thơ"
+        ]
+    },
+    {
+        "id":8,
+        "city": "Long Xuyên",
+        "showroom": [
+            "Long Xuyên"
+        ],
+        "address": [
+            "22 Hà Hoàng Hổ, P.Mỹ Xuyên, TP.Long Xuyên, An Giang"
+        ]
+    },
+    {
+        "id":9,
+        "city": "Trung Tâm Bảo Hành",
+        "showroom": [
+            "Hải Triều Service Center"
+        ],
+        "address": [
+            "113 Đặng Dung, P.Tân Định, Q.1, TP.HCM"
+        ]
+    }
+]

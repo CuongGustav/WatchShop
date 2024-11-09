@@ -36,7 +36,9 @@ header .header-content{
 .header-content,
 .productList,
 .paginationPage,
-.contactUs {
+.contactUs,
+.information,
+.legalInfor {
     max-width: 90%;
     width: 1200px;
     margin: auto
@@ -363,3 +365,181 @@ header .header-content{
 .sendMessage .button button:hover {
     background-color: #ff652f;
 }
+
+/*Footer Social*/
+.footer .social {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+.social .socialBrands {
+    position: relative;
+}
+.social .socialBrands i{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.social .socialBrands i:hover ~ span{
+   display: flex;
+}
+.social .facebook i:hover {
+    color: #fff;
+    background-color: #3a589d;
+}
+.social .instagram i:hover {
+    color: #fff;
+    background: linear-gradient(45deg, #F20574, #BF0572);
+}
+.social .tiktok i:hover {
+    color: #fff;
+    background-color: #000;
+}
+.social .x i:hover {
+    color: #000;
+    background-color: #fff;
+    font-weight: 1000;
+    border-color: #000;
+}
+.social .pinterest i:hover,
+.social .youtube i:hover {
+    color: #fff;
+    background-color: #cb2320;
+}
+.social .flickr i:hover {
+    color: #fff;
+    background-color: #e5086f;
+}
+.social .socialBrands span{
+    position:absolute;
+    top: calc( -50% - 20px);
+    left: calc( -50% - 35px );
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    color: #fff;
+    background-color: #000;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    display: none;
+}
+.social .socialBrands span::before {
+    content: "";
+    border-style: solid;
+    border-width: 8px 12px;
+    border-color: #000 transparent transparent transparent;
+    position: absolute;
+    top: calc( +50% + 15px);
+}
+
+/*Footer information*/
+.inforContainer{
+    border-top: 2px solid rgba(236, 245, 66);
+    border-bottom: 2px solid rgba(236, 245, 66);
+}
+.information{
+    display: grid;
+    grid-template-columns:  25% 25% 25% 25%  1fr;
+    padding: 40px 0;
+}
+.information .policy{
+    padding: 20px;
+}
+.information .policy img{
+    width: 90%;
+    display: block;
+    filter: brightness(0) saturate(100%) invert(69%) sepia(75%) saturate(500%) hue-rotate(10deg) brightness(98%) contrast(92%);
+}
+.policy .policyContent {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.policy .policyContent h2{
+    margin-bottom: 10px;
+}
+.policy .policyContent a{
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500;
+}
+.policy .policyContent a:hover {
+    color: #ff652f
+}
+.information .locationRetail .retail{
+    position: fixed;
+    background-color: #fff;
+    left: 50%;
+    top: 50%;
+    box-shadow: 0px 2px 10px #000;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: none;
+}
+.locationRetail .retail.active{
+    display: block;
+}
+/*referance*/
+.information .referance {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.information .referance  h2,
+.information .forUs h2{
+    margin-bottom: 10px;
+}
+.information .referance h2:not(:first-child){
+    margin-top: 40px;
+}
+.information .referance a{
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500;
+}
+.information .referance a:hover{
+    color: #ff652f;
+}
+/*forUs*/
+.forUs img{
+    display: block;
+    width: 100%;
+}
+.forUs .haiChieu{
+    display: grid;
+    grid-template-columns: 50% 50% 1fr;
+    gap:20px;
+}
+.forUs .notificationImg{
+    margin-top: 10px;
+}
+.legalInfor-Container{
+    background: linear-gradient(90deg, #ede728d6 0%, #f3f9a7 100%);
+    padding: 20px 0;
+}
+.legalInfor{
+    font-size: 12px;
+    font-weight: 450;
+}
+

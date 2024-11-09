@@ -164,6 +164,23 @@ const sendEmail = () => {
 document.getElementsByClassName('yourEmail')[0].addEventListener('input', checkEmailInContactUs);
 
 
+/* Footer Retail  */
+document.querySelector('.city').addEventListener('click', function() {
+    document.querySelector('.retail').classList.toggle('active');
+});
+/* Link googleMap load browser */
+document.addEventListener("DOMContentLoaded", function() {
+    const addressLink = document.querySelector('.google-maps-link');
+    const addressText = addressLink.textContent.trim();
+    
+    const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(addressText)}`;
+    addressLink.href = googleMapsUrl;
+    addressLink.target = "_blank"; 
+});
+
+
+
+
 /* App */
 const initApp = () => {
     fetch('products.json')
