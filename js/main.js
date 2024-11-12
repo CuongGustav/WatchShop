@@ -164,22 +164,68 @@ const sendEmail = () => {
 document.getElementsByClassName('yourEmail')[0].addEventListener('input', checkEmailInContactUs);
 
 
-/* Footer Retail  */
-document.querySelector('.city').addEventListener('click', function() {
-    document.querySelector('.retail').classList.toggle('active');
+let listLocations = [];
+
+/*City retail active*/
+document.addEventListener('click', function(event) {
+    const cityElement = event.target.closest('.city'); // Lấy phần tử gần nhất của .city
+    const retail = cityElement ? cityElement.querySelector('.retail') : null;
+
+    if (event.target.closest('.fa-xmark')) {
+        if (retail) {
+            retail.classList.remove('active'); // Tắt active nếu nhấn vào dấu nhân
+        }
+    } else if (!cityElement) {
+        // Nếu click bên ngoài .city, tắt active
+        const allRetail = document.querySelectorAll('.retail');
+        allRetail.forEach((retail) => {
+            retail.classList.remove('active');
+        });
+    } else {
+        // Nếu click vào trong .city, không làm gì (không tắt active)
+        if (retail) {
+            retail.classList.add('active'); // Đảm bảo rằng retail đang ở trạng thái active nếu chưa
+        }
+    }
 });
-/* Link googleMap load browser */
-document.addEventListener("DOMContentLoaded", function() {
-    const addressLink = document.querySelector('.google-maps-link');
-    const addressText = addressLink.textContent.trim();
-    
-    const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(addressText)}`;
-    addressLink.href = googleMapsUrl;
-    addressLink.target = "_blank"; 
-});
+/*List locations Store*/
+const locationStores = document.querySelector('.locationStore');
+const addLocationStore = () => {
+    locationStores.innerHTML = '';
+    if (listLocations.length > 0) {
+        listLocations.forEach(locationStore => {
+            let newLocationStore = document.createElement('div');
+            newLocationStore.classList.add("city");
+            newLocationStore.innerHTML = `
+                <span>${locationStore.city}</span>
+                <div class="retail">
+                    <div class="headRetail">
+                        <h3>HỆ THỐNG CỬA HÀNG TẠI ${locationStore.city}</h3>
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    ${locationStore.showroom.map((showroom, index) => `
+                        <div class="contentRetail">
+                            <span class="showroom">Showroom ${showroom}</span>
+                            <span> 
+                                <p>Địa chỉ:</p> 
+                                <a href="#" class="google-maps-link">${locationStore.address[index]}</a>
+                            </span>
+                        </div>
+                    `).join('')}
+                </div>
+                <i class="fa-solid fa-angle-right"></i>
+            `;
+            locationStores.appendChild(newLocationStore);
+        });
 
-
-
+        document.querySelectorAll('.google-maps-link').forEach(link => {
+            const addressText = link.textContent.trim();
+            const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(addressText)}`;
+            link.href = googleMapsUrl;
+            link.target = "_blank";
+        });
+    }
+};
 
 /* App */
 const initApp = () => {
@@ -189,8 +235,15 @@ const initApp = () => {
         listProducts = dataItems;
         addDataItemsToHTML();
         showPage(currentPage);
+
+        return fetch('locations.json');
+    })
+    .then(response => response.json())
+    .then(locationData => {
+        listLocations = locationData;
+        addLocationStore();
     })
     .catch(error => console.log(error));
-}
+};
 
 initApp();

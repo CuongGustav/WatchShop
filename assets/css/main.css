@@ -491,12 +491,83 @@ header .header-content{
     z-index: 9999;
     flex-wrap: wrap;
     flex-direction: column;
-    padding: 10px 20px;
+    padding: 10px 10px 10px 20px;
     border-radius: 8px;
+    cursor: text;
     display: none;
+
 }
 .locationRetail .retail.active{
     display: block;
+}
+.information .locationRetail h2 {
+    margin-bottom: 20px;
+}
+.information .locationRetail .locationStore{
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px 0 0;
+    gap: 10px;
+}
+.locationRetail .locationStore .city {
+    display: flex;
+    justify-content: space-between;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500;
+}
+.locationStore .city > span:hover {
+    color: #ff652f;
+}
+/*retail*/
+.city .retail{
+    display: flex;
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.city .retail::-webkit-scrollbar {
+    width: 6px;
+}
+.city .retail::-webkit-scrollbar-thumb {
+    background-color: #ff652f;
+    border-radius: 5px;
+}
+.city .retail::-webkit-scrollbar-track {
+    background: transparent;
+}
+.city .retail .headRetail{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.retail .headRetail > i {
+    font-size: 24px;
+    color: #ff652f;
+    cursor: pointer;
+}
+.city .retail .contentRetail {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    gap: 5px;
+}
+.retail .contentRetail .showroom {
+    color: #ff652f;
+}
+.retail .contentRetail span:nth-child(2){
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.retail .contentRetail a {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.retail .contentRetail a:hover {
+    color: blue;
 }
 /*referance*/
 .information .referance {
