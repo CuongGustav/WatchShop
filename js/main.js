@@ -58,10 +58,10 @@ const addDataItemsToHTML = () => {
         })
     }
 }
+
 /* Pagination Page */
 const itemsPerPage = 12;
 let currentPage = 1;
-
 function showPage(page) {
     const items = document.querySelectorAll('.productList .item');
     const totalPages = Math.ceil(items.length / itemsPerPage);
@@ -72,10 +72,9 @@ function showPage(page) {
     });
     displayPageNumbers(totalPages);
 }
-
-function displayPageNumbers (totalPages) {
+function displayPageNumbers(totalPages) {
     const pageNumbersHTML = document.querySelector('.pageNumbers');
-    pageNumbersHTML.innerHTML = "";
+    pageNumbersHTML.innerHTML = '';
     const maxVisiblePages = 5;
     let startPage, endPage;
     if (totalPages < maxVisiblePages) {
@@ -106,6 +105,7 @@ function displayPageNumbers (totalPages) {
         pageNumbersHTML.appendChild(pageButton);
     }
 }
+
 function nextPage() {
     const items = document.querySelectorAll('.productList .item');
     const totalPages = Math.ceil(items.length / itemsPerPage);
@@ -114,6 +114,7 @@ function nextPage() {
         showPage(currentPage);
     }
 }
+
 function prevPage () {
     if (currentPage > 1) {
         currentPage--;
